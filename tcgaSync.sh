@@ -30,7 +30,7 @@ then
     echo "File $baseLocal$LATEST  exists"
 else
     cd $baseLocal
-    #nice /inside/home/jzhu/scripts/firehose_get -b analyses latest
+    nice /inside/home/jzhu/scripts/firehose_get -b analyses latest
 fi
 
 cd $homeDIR
@@ -53,4 +53,3 @@ python md5CheckDir.py $baseLocal >> md5.manifest
 cat web_error check_html.out md5.manifest > error
 cat error |mail -s 'tcgaSync' jzhu@soe.ucsc.edu
 
-#cat check_html.out | awk -F ':' '{print $1}' | xargs rm
