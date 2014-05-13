@@ -3,7 +3,7 @@ import sys,string
 from glob import glob
 from urlparse import urlparse
 
-basedir = "/inside/depot"
+basedir = "/data/TCGA"
 
 handle = open(sys.argv[1])
 

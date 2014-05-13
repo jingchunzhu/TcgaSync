@@ -35,7 +35,9 @@ def scanDir( base ):
 		omd5 = tmp[0]
 		nFile = file.replace( ".md5", "" )
 		if tmp[1] != os.path.basename(nFile):
-		    print "BAD_MD5:", file, tmp
+                    # temporary skip this because Broad bad data files
+		    #print "BAD_MD5:", file, tmp
+                    pass
 		else:
 		    if os.path.exists( nFile ):
 		        if fileCheck(nFile):
